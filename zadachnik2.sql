@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost
--- Время создания: Мар 09 2020 г., 19:35
+-- Время создания: Мар 09 2020 г., 19:31
 -- Версия сервера: 5.7.21-20-beget-5.7.21-20-1-log
 -- Версия PHP: 5.6.40
 
@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Структура таблицы `tasks`
 --
 -- Создание: Мар 09 2020 г., 16:25
--- Последнее обновление: Мар 09 2020 г., 16:34
+-- Последнее обновление: Мар 09 2020 г., 16:30
 --
 
 DROP TABLE IF EXISTS `tasks`;
@@ -40,6 +40,17 @@ CREATE TABLE `tasks` (
   `task_status` int(11) NOT NULL DEFAULT '0',
   `task_edited_by_admin` int(11) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `tasks`
+--
+
+INSERT INTO `tasks` (`task_id`, `task_user_name`, `task_email`, `task_text`, `task_status`, `task_edited_by_admin`) VALUES
+(1, 'test', 'test@test.com', 'test job', 0, 0),
+(2, 'test', 'test@test.com', '&lt;script&gt;alert(‘test’);&lt;/script&gt;', 0, 0),
+(3, 'test2', 'test@test.com', 'test job 2', 0, 0),
+(4, 'test3', 'test3@test.com', 'test job 3', 0, 0),
+(5, 'test4', 'test4@test.com', 'test job 4 / 2', 1, 1);
 
 -- --------------------------------------------------------
 
